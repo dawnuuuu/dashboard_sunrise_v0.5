@@ -1,0 +1,32 @@
+/* src/styles/Navbar.css */
+
+.navbar {
+  background-color: white; /* Background color for the navbar */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 3px solid #007BFF; /* Blue line under the entire navbar */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensures full width for underline */
+}
+
+.nav-link {
+  color: black; /* Default text color for inactive links */
+  background-color: white; /* Default background for inactive links */
+  text-decoration: none;
+  padding: 10px 15px;
+  text-align: center;
+  flex-grow: 1; /* Ensures each link can expand and use equal space */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.nav-link-active {
+  background-color: #007BFF; /* Blue background for active link */
+  color: white; /* White text for active link */
+}
