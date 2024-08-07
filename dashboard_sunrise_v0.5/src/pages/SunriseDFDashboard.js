@@ -8,6 +8,7 @@ import ParametersList from '../components/ParametersList';
 import ScenarioPartition from '../components/ScenarioPartition';
 import MetaDataOntology from '../components/MetaDataOntology';
 import QualityMetrics from '../components/QualityMetrics';
+import ParametersDistributionChart from '../components/ParametersDistributionChart';
 import '../styles/Dashboard.css';
 
 function SunriseDFDashboard() {
@@ -20,22 +21,44 @@ function SunriseDFDashboard() {
         <ConnectedSCDB />
         <div className="right-panel">
           <SubNavbar setActiveSection={setActiveSection} />
-          <div className="info-panel">
-            {activeSection === 'general' && (
-              <>
-                <GeneralInformation />
-                <ScenarioTaxonomy />
-                <ParametersList />
-                <ScenarioPartition />
-                <MetaDataOntology />
-                <QualityMetrics />
-              </>
-            )}
-            {activeSection === 'scenarios' && <ScenarioTaxonomy />}
-            {activeSection === 'parameters' && <ParametersList />}
-            {activeSection === 'meta-data' && <MetaDataOntology />}
-            {activeSection === 'quality-metrics' && <QualityMetrics />}
-          </div>
+          {activeSection === 'general' && (
+            <div className="info-panel">
+              <GeneralInformation />
+              <ScenarioTaxonomy />
+              <ParametersList />
+              <ScenarioPartition />
+              <ParametersDistributionChart />
+              <MetaDataOntology />
+              <QualityMetrics />
+            </div>
+          )}
+          {activeSection !== 'general' && (
+            <div className="content-panel">
+              {activeSection === 'scenarios' && (
+                <>
+                  <ScenarioTaxonomy />
+                  <ScenarioPartition />
+                  
+                </>
+              )}
+              {activeSection === 'parameters' && (
+                <>
+                  <ParametersList />
+                  <ParametersDistributionChart />
+                </>
+              )}
+              {activeSection === 'meta-data' && (
+                <>
+                  <MetaDataOntology />
+                </>
+              )}
+              {activeSection === 'quality-metrics' && (
+                <>
+                  <QualityMetrics />
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
