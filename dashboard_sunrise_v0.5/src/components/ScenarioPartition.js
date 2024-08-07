@@ -1,11 +1,24 @@
-// src/components/ScenarioPartition.js
 import React from 'react';
+import { Pie } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import '../styles/ChartStyles.css';
 
-function ScenarioPartition() {
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+function ScenarioPartition({ data }) {
+  // Provide default data to avoid undefined errors
+  const defaultData = {
+    labels: [],
+    datasets: [{
+      data: [],
+      backgroundColor: [],
+    }]
+  };
+
   return (
-    <div className="scenario-partition">
+    <div className="chart-container">
       <h2>Scenario Partition</h2>
-      {/* Add chart logic here */}
+      <Pie data={data || defaultData} />
     </div>
   );
 }

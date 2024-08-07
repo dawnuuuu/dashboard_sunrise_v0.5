@@ -1,0 +1,23 @@
+/* src/styles/MetaDataOntology.css */
+
+.meta-data-ontology {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .meta-data-ontology ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .meta-data-ontology li {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  

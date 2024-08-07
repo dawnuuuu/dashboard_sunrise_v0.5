@@ -1,16 +1,27 @@
 // src/components/ParametersDistributionChart.js
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement // Add ArcElement for charts that need it
+} from 'chart.js';
 import '../styles/ChartStyles.css';
 
+// Register all required components
 ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ArcElement // Register ArcElement if you are using pie charts or similar
 );
 
 const options = {

@@ -1,0 +1,29 @@
+.parameters-list {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    overflow-y: auto;
+    height: 100%;
+}
+
+.parameters-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.parameters-list th,
+.parameters-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.parameters-list th {
+    background-color: var(--background-color);
+}
+
+.parameters-list td {
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,47 @@
+/* src/styles/ConnectedSCDB.css */
+.connected-scdb {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .connected-scdb h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .connected-scdb ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .connected-scdb li {
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .connected-scdb label {
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .connected-scdb input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .connected-scdb {
+      padding: 10px;
+      margin: 5px;
+    }
+  }
+  
