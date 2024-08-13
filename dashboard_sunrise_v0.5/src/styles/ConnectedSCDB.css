@@ -1,39 +1,38 @@
-/* src/styles/ConnectedSCDB.css */
 .connected-scdb {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-right: 20px; /* Ensure spacing between components */
-    flex-grow: 1; /* Adjust based on grid layout */
-  }
-  
-  .connected-scdb h3 {
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  
-  .connected-scdb ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .connected-scdb li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .connected-scdb label {
-    cursor: pointer;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .connected-scdb input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+  flex-grow: 1; /* Allow component to grow based on content */
+  max-height: 100%; /* Ensure it doesn't exceed its container */
+}
+
+.connected-scdb h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.connected-scdb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.connected-scdb li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.connected-scdb label {
+  cursor: pointer;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.connected-scdb input[type="checkbox"] {
+  margin-right: 10px;
+}

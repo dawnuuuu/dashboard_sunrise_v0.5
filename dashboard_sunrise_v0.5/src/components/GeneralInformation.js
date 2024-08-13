@@ -1,8 +1,9 @@
 // src/components/GeneralInformation.js
 import React from 'react';
-import '../styles/GeneralInformation.css'; // CSS file for styling
+import '../styles/GeneralInformation.css';
 
-function GeneralInformation() {
+function GeneralInformation({ data }) {
+  // Example data structure for general info
   const generalInfo = {
     ODD: 'Urban City',
     Cost: '$200M',
@@ -14,13 +15,16 @@ function GeneralInformation() {
   return (
     <div className="general-info">
       <h3>General Information</h3>
-      <ul>
-        {Object.entries(generalInfo).map(([key, value]) => (
-          <li key={key}>
-            <strong>{key}:</strong> {value}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <tbody>
+          {Object.entries(generalInfo).map(([key, value]) => (
+            <tr key={key}>
+              <td className="info-key">{key}</td>
+              <td className="info-value">{value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
